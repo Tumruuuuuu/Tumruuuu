@@ -36,17 +36,17 @@ function MyTabs() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-            if (route.name === "Мэдээ") {
+            if (route.name === "Home") {
               iconName = focused ? "home" : "home-outline";
-            } else if (route.name === "Тоглолт") {
+            } else if (route.name === "Search") {
               iconName = focused ? "search" : "search-outline";
-            } else if (route.name === "Бусад") {
+            } else if (route.name === "Create") {
               iconName = focused ? "add" : "add-outline";
-            } else if (route.name === "Фантази") {
+            } else if (route.name === "Notifications") {
               iconName = focused
                 ? "chatbubble-ellipses"
                 : "chatbubble-ellipses-outline";
-            } else if (route.name === "Хэрэглэгч") {
+            } else if (route.name === "Saved") {
               iconName = focused
                 ? "ios-person-circle"
                 : "ios-person-circle-outline";
@@ -66,27 +66,27 @@ function MyTabs() {
         })}
       >
         <Tab.Screen
-          name="Мэдээ"
+          name="Home"
           component={HomeStackScreen}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Тоглолт"
+          name="Search"
           component={Search}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Бусад"
+          name="Create"
           component={Create}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Фантази"
+          name="Notifications"
           component={Notif}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="Хэрэглэгч"
+          name="Saved"
           component={Saved}
           options={{ headerShown: false }}
         />
