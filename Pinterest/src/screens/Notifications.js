@@ -12,7 +12,6 @@ import {
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import { Feather } from "@expo/vector-icons";
 
-      <Text>Notifications</Text>
 const FirstRoute = () => (
   <View style={[styles.scene, { backgroundColor: "white" }]}>
     <ScrollView>
