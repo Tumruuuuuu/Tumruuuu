@@ -8,6 +8,7 @@ import Search from "./src/screens/Search";
 import Create from "./src/screens/Create";
 import Notif from "./src/screens/Notifications";
 import Saved from "./src/screens/Saved";
+import Next from "./src/screens/Next";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -25,6 +26,21 @@ function HomeStackScreen() {
       <HomeStack.Screen name="Notif" component={Notif} />
       <HomeStack.Screen name="Saved" component={Saved} />
     </HomeStack.Navigator>
+  );
+}
+const SearchStack = createNativeStackNavigator();
+
+function SearchStackScreen() {
+  return (
+    <SearchStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName="Search"
+    >
+      <HomeStack.Screen name="Search" component={Search} />
+      <SearchStack.Screen name="Next" component={Next} />
+    </SearchStack.Navigator>
   );
 }
 
@@ -72,7 +88,7 @@ function MyTabs() {
         />
         <Tab.Screen
           name="Search"
-          component={Search}
+          component={SearchStackScreen}
           options={{ headerShown: false }}
         />
         <Tab.Screen

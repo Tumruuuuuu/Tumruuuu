@@ -8,9 +8,10 @@ import {
   ScrollView,
   Image,
   TextInput,
+  Pressable,
 } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
-import { Feather, FontAwesome } from "@expo/vector-icons";
+import { Feather, FontAwesome, AntDesign } from "@expo/vector-icons";
 
 const FirstRoute = () => (
   <View style={[styles.scene, { backgroundColor: "white" }]}>
@@ -59,7 +60,7 @@ const renderTabBar = (props) => (
   />
 );
 
-const App = () => {
+const App = ({ navigation }) => {
   const [index, setIndex] = useState(0);
   const [routes] = useState([
     { key: "first", title: "Updates" },
@@ -73,6 +74,9 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Pressable onPress={() => navigation.goBack()}>
+        <AntDesign style={styles.left} name="left" />
+      </Pressable>
       <View style={styles.v0}>
         <TabView
           navigationState={{ index, routes }}
@@ -166,6 +170,10 @@ const styles = StyleSheet.create({
     color: "grey",
     fontSize: 15,
     marginLeft: 10,
+  },
+  left: {
+    fontSize: 30,
+    margin: 15,
   },
 });
 

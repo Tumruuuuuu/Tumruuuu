@@ -6,11 +6,12 @@ import {
   TextInput,
   ScrollView,
   Image,
+  Pressable,
 } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 
-export default function Search() {
+export default function Search({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.vw}>
@@ -23,10 +24,13 @@ export default function Search() {
       <ScrollView>
         <Text style={styles.text}>Ideas for you</Text>
         <View style={styles.view1}>
-          <Image
-            style={styles.img}
-            source={require("../../src/images/q.jpg")}
-          />
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/q.jpg")}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Next")}></Pressable>
           <Image
             style={styles.img}
             source={require("../../src/images/w.jpg")}
@@ -34,44 +38,60 @@ export default function Search() {
         </View>
         <Text style={styles.text1}>Popular on Pinterest</Text>
         <View style={styles.view1}>
-          <Image
-            style={styles.img}
-            source={require("../../src/images/e.jpg")}
-          />
-          <Image
-            style={styles.img}
-            source={require("../../src/images/r.jpg")}
-          />
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/e.jpg")}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/r.jpg")}
+            />
+          </Pressable>
         </View>
         <View style={styles.view1}>
-          <Image
-            style={styles.img}
-            source={require("../../src/images/t.jpg")}
-          />
-          <Image
-            style={styles.img}
-            source={require("../../src/images/y.jpg")}
-          />
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/t.jpg")}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/y.jpg")}
+            />
+          </Pressable>
         </View>
         <View style={styles.view1}>
-          <Image
-            style={styles.img}
-            source={require("../../src/images/u.jpg")}
-          />
-          <Image
-            style={styles.img}
-            source={require("../../src/images/i.jpg")}
-          />
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/u.jpg")}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/i.jpg")}
+            />
+          </Pressable>
         </View>
         <View style={styles.view1}>
-          <Image
-            style={styles.img}
-            source={require("../../src/images/o.jpg")}
-          />
-          <Image
-            style={styles.img}
-            source={require("../../src/images/p.jpg")}
-          />
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/o.jpg")}
+            />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Next")}>
+            <Image
+              style={styles.img}
+              source={require("../../src/images/p.jpg")}
+            />
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
