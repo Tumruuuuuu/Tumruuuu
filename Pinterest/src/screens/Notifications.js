@@ -8,9 +8,10 @@ import {
   ScrollView,
   Image,
   Pressable,
+  TextInput,
 } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
-import { Feather } from "@expo/vector-icons";
+import { Feather, FontAwesome } from "@expo/vector-icons";
 
 const FirstRoute = () => (
   <View style={[styles.scene, { backgroundColor: "white" }]}>
@@ -22,7 +23,7 @@ const FirstRoute = () => (
       <Image style={styles.img} source={require("../../src/images/p1.jpg")} />
       <View style={styles.view1}>
         <Text style={styles.txt}>Treding searches</Text>
-        <Feather style={styles.icon} name="more-horizontal" />
+        <Feather style={styles.iicon} name="more-horizontal" />
       </View>
       <Image style={styles.img} source={require("../../src/images/p2.jpg")} />
     </ScrollView>
@@ -34,6 +35,11 @@ const SecondRoute = () => (
     <View style={styles.view2}>
       <Text style={styles.text}>Share ideas with</Text>
       <Text style={styles.text}> your friends</Text>
+    </View>
+    <View style={styles.search}>
+      <FontAwesome name="search" style={styles.icon1} />
+      <TextInput style={styles.txtt}>Search by name or email</TextInput>
+      <FontAwesome name="camera" style={styles.iconn} />
     </View>
   </View>
 );
@@ -110,6 +116,12 @@ const styles = StyleSheet.create({
   icon: {
     color: "black",
     fontSize: 18,
+    marginLeft: 20,
+  },
+  iicon: {
+    color: "black",
+    fontSize: 18,
+    marginLeft: 185,
   },
   txt: {
     fontSize: 16,
@@ -124,10 +136,37 @@ const styles = StyleSheet.create({
   view2: {
     width: 250,
     alignItems: "center",
+    marginLeft: 70,
+    marginTop: 70,
   },
   text: {
     fontSize: 28,
     fontWeight: "600",
+  },
+  search: {
+    backgroundColor: "#f0f0f0",
+    width: 350,
+    height: 45,
+    borderRadius: 40,
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 12,
+    marginTop: 40,
+  },
+  icon1: {
+    color: "grey",
+    fontSize: 18,
+    marginLeft: 10,
+  },
+  iconn: {
+    color: "grey",
+    fontSize: 18,
+    marginLeft: 105,
+  },
+  txtt: {
+    color: "grey",
+    fontSize: 15,
+    marginLeft: 10,
   },
 });
 
